@@ -4,7 +4,18 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <section className="relative bg-[#063347] text-white min-h-[90vh] flex items-center overflow-hidden">
+    <section
+      className="relative bg-[#063347] text-white min-h-[90vh] flex items-center overflow-hidden"
+      style={{
+        backgroundImage: 'url("https://5.imimg.com/data5/HH/XV/YR/SELLER-6169777/plus-banner-1-500x500.jpg")', // replace with your image path
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/50 z-0"></div>
+
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center md:text-left">
         <motion.p
@@ -70,8 +81,8 @@ const Hero = () => {
         className="absolute bottom-10 right-10 w-[250px] md:w-[400px] z-20"
         initial={{ x: 300, opacity: 0 }}
         animate={{
-          x: [300, 0, 20, 0], // smooth float back and forth
-          y: [0, -10, 0, -10], // subtle up/down floating
+          x: [300, 0, 20, 0],
+          y: [0, -10, 0, -10],
           opacity: 1,
         }}
         transition={{
